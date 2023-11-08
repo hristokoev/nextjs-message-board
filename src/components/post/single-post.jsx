@@ -40,7 +40,7 @@ export default function SinglePost({ post }) {
 					</div>
 				</div>
 			</div>
-			<div dangerouslySetInnerHTML={{ __html: post.body }} className="mb-6" />
+			{/* <div dangerouslySetInnerHTML={{ __html: post.body }} className="mb-6" /> */}
 			<div className="mt-4">
 				<h3 className="font-semibold text-slate-800 mb-4">{commentsLength > 1 ? `${commentsLength} Comments` : `${commentsLength} Comment`}</h3>
 				<ul className="space-y-5">

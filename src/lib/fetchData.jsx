@@ -44,13 +44,12 @@ Fetch by ID
 export async function fetchSinglePost(id) {
   try {
     const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { cache: 'no-store' }).then((res) => res.json())
-
-    if (!post) {
-      throw new Error(`Post with ID ${id} not found.`)
-    }
-
     const user = await fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`, { cache: 'no-store' }).then((res) => res.json())
     const comments = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`, { cache: 'no-store' }).then((res) => res.json())
+
+		if (post.id === undefined) {
+			throw new Error('Failed to fetch data')
+		}
 
     return {
       id: post.id,

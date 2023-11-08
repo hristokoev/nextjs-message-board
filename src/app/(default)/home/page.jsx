@@ -6,7 +6,7 @@ export default async function Home() {
 	const posts = await fetchAllPosts()
 
 	return (
-
+		
 		<div className="space-y-4">
 			{posts.map((post) => (
 				<PostItem key={post.id} post={post} />
