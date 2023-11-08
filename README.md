@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Message Board
 
 This is a simple message board application that allows users to post messages and comment on them. The application is built using Next.js and uses the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API to fetch data.
