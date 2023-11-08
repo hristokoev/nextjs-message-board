@@ -1,7 +1,9 @@
+import SinglePostLoading from "@/components/post/single-post-loading"
+
 export default async function LoadingPost() {
 	return (
 		<div>
-			<h1>Loading...</h1>
+			<SinglePostLoading />
 		</div>
 	)
 }

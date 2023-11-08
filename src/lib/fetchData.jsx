@@ -23,8 +23,8 @@ export async function fetchAllPosts() {
       return {
         id: post.id,
         title: post.title,
-        body: post.body.slice(0, 100).trim() + '...',
-        author: author.name,
+        body: post.body.slice(0, 140).trim() + '...',
+        author: author,
         comments: postComments.length,
       }
     })

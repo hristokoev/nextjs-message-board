@@ -1,4 +1,5 @@
 import { fetchSinglePost } from "@/lib/fetchData"
+import SinglePost from "@/components/post/single-post"
 
 export default async function Post({ params: { id }}) {
 
@@ -6,7 +7,7 @@ export default async function Post({ params: { id }}) {
 
 	return (
 		<div>
-			<pre>{JSON.stringify(post, null, 2)}</pre>
+			<SinglePost post={post} />
 		</div>
 	)
 }
