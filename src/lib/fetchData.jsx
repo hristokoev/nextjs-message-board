@@ -7,9 +7,9 @@ Fetch all
 export async function fetchAllPosts() {
   try {
     const [posts, users, comments] = await Promise.all([
-			fetch('https://jsonplaceholder.typicode.com/posts').then((res) => res.json()),
-			fetch('https://jsonplaceholder.typicode.com/users').then((res) => res.json()),
-			fetch('https://jsonplaceholder.typicode.com/comments').then((res) => res.json()),
+			fetch('https://jsonplaceholder.typicode.com/posts', { cache: 'no-store' }).then((res) => res.json()),
+			fetch('https://jsonplaceholder.typicode.com/users', { cache: 'no-store' }).then((res) => res.json()),
+			fetch('https://jsonplaceholder.typicode.com/comments', { cache: 'no-store' }).then((res) => res.json()),
     ])
 
     const userMap = new Map()
@@ -43,14 +43,14 @@ Fetch by ID
 
 export async function fetchSinglePost(id) {
   try {
-    const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then((res) => res.json())
+    const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { cache: 'no-store' }).then((res) => res.json())
 
     if (!post) {
       throw new Error(`Post with ID ${id} not found.`)
     }
 
-    const user = await fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`).then((res) => res.json())
-    const comments = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`).then((res) => res.json())
+    const user = await fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`, { cache: 'no-store' }).then((res) => res.json())
+    const comments = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`, { cache: 'no-store' }).then((res) => res.json())
 
     return {
       id: post.id,
