@@ -9,7 +9,7 @@ export default function SinglePostLoading() {
 				</div>
 			</div>
 			<div className="pb-4">
-				<div className="w-96 h-8 bg-slate-300 mb-3"></div>
+				<div className="w-36 md:w-96 h-8 bg-slate-300 mb-3"></div>
 				<div className="flex flex-wrap text-sm">
 					<div className="flex items-center after:px-2">
 						<div className="w-18 h-4 bg-slate-200"></div>
