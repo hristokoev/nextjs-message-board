@@ -1,5 +1,10 @@
 import Link from 'next/link'
 
+export const metadata = {
+	title: '404 - Board',
+	description: 'Made with Next.js and Tailwind CSS',
+}
+
 export default async function NotFound() {
 	return (
 		<div className="max-w-2xl m-auto mt-16">
