@@ -5,7 +5,7 @@ import './css/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-	title: 'Message Board - Next.js + Tailwind CSS',
+	title: 'Home - Board',
 	description: 'Made with Next.js and Tailwind CSS',
 }
 
