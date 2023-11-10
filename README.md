@@ -1,6 +1,6 @@
 ## Message Board
 
-This is a simple message board application that allows users to post messages and comment on them. The application is built using Next.js and uses the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API to fetch data.
+This is a simple message board application that shows posts feed and individual posts with comments. The application is built using Next.js and uses the [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API to fetch data.
 
 ### Main page
 
